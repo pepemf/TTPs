@@ -1,0 +1,10 @@
+Order,Technique,TestName,auto_generated_guid,supported_platforms,TimeoutSeconds,InputArgs,AtomicsFolder,enabled,notes
+1,T1003.001,Dump LSASS with rundll32,,windows,120,,Public,TRUE,
+2,T1036.003,Masquerading: Rename System Utilities,,windows,120,,Public,TRUE,
+3,T1053.005,Scheduled Task creation,,windows,120,,Public,TRUE,
+4,T1055.012,Process Hollowing via PowerShell,,windows,120,"hollow_binary_path=C:\\Windows\\System32\\cmd.exe;parent_process_name=explorer;spawnto_process_name=werfault",Public,TRUE,
+5,T1059.001,PowerShell encoded command,,windows,120,"command=Write-Host Attack!",Public,TRUE,
+6,T1059.003,Windows Command Shell (whoami),,windows,120,"command=whoami /all > %TEMP%\\who.txt",Public,TRUE,
+7,T1105,Ingress Tool Transfer via certutil,,windows,120,"file_url=https://example.com/payload.bin;output_path=%TEMP%\\payload.bin",Public,TRUE,
+8,T1218.011,Rundll32 remote DLL execution,,windows,120,"input_url=https://example.com/evil.dll;input_file=C:\\ProgramData\\lockdll.dll",Public,TRUE,
+9,T1543.003,Create malicious Windows Service,,windows,120,"service_name=LockSvc;binary_path=C:\\ProgramData\\svc.exe",Public,TRUE,
